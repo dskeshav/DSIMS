@@ -6,11 +6,11 @@ var logger=require('morgan');
 var app=express();
 
 //Database connection
-var mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/DSIMS')
-  .then(() =>  console.log('connection succesful'))
-  .catch((err) => console.error(err));
+// var mongoose = require('mongoose');
+// mongoose.Promise = require('bluebird');
+// mongoose.connect('mongodb://localhost/DSIMS')
+//   .then(() =>  console.log('connection succesful'))
+//   .catch((err) => console.error(err));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
