@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "nodemon ./bin/faculty ",
+    "start": "nodemon ./bin/student",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
