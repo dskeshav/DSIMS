@@ -5,15 +5,15 @@ import { AppComponent } from './app.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
 import { FacultyLoginComponent } from './faculty-login/faculty-login.component';
 
-//import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-// const appRoutes: Routes = [
-//   {
-//     path: '',
-//     component: StudentLoginComponent,
-//     data: { title: 'studentlogin' }
-//   },
-// ]
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: StudentLoginComponent,
+    data: { title: 'studentlogin' }
+  },
+]
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { FacultyLoginComponent } from './faculty-login/faculty-login.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    //RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
   ],
 
   bootstrap: [AppComponent]
