@@ -11,5 +11,9 @@ export class FacultyLoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  login() {
+    const url = location.host.split(':');
+    const domain = url[0];
+    window.location.href = 'http://' + domain + ':4200/dashboard';
+  }
 }

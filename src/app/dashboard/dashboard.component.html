@@ -4,6 +4,9 @@
       <a class="nav-link" [routerLink]="['/dashboard']">Home</a>
     </li>
     <li class='nav-item'>
+      <a class="nav-link" [routerLink]="['/register']">Register</a>
+    </li>
+    <li class='nav-item'>
       <a class="nav-link" [routerLink]="['/scores']">Scores</a>
     </li>
     <li class='nav-item'>
@@ -12,12 +15,11 @@
     <li class="nav-item dropdown">
       <a class="dropdown-toggle nav-link cursorp" data-toggle="dropdown">
         Tool</a>
-        <ul class="bg-dark dropdown-menu lg">
-          <li class="nav-item cursorp" (click)='logOut()'>
-            <span class="nav-link">Logout</span>
-          </li>
-        </ul>
+      <ul class="bg-dark dropdown-menu lg">
+        <li class="nav-item cursorp" (click)='logOut()'>
+          <span class="nav-link">Logout</span>
+        </li>
+      </ul>
     </li>
   </ul>
-
 </nav>

@@ -1,3 +1,17 @@
 <p>
   faculty-login works!
 </p>
+<div class="container col-md-7" style="margin-top: 150px">
+  <div class="card card-container">
+    <label>Username:
+      <br>
+      <input type="text" id="usr" [(ngModel)]="usr" required>
+    </label>
+    <label>Password:<br>
+      <input type="password" placeholder="YYYY-MM-DD" id="pass" [(ngModel)]="pass" required>
+    </label>
+    <div class="col-xs-3 ">
+      <button class="btn btn-primary" (click)="login()">Login</button>
+    </div>
+  </div>
+</div>

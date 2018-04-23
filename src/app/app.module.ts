@@ -9,8 +9,14 @@ import { FacultyLoginComponent } from './faculty-login/faculty-login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { RegisterComponent } from './register/register.component';
 
 const appRoutes: Routes = [
+  {
+    path:'/faculty',
+    component:FacultyLoginComponent,
+    data:{title:'faculty'}
+  },
   {
     path: '',
     component: StudentLoginComponent,
@@ -29,6 +35,7 @@ const appRoutes: Routes = [
     StudentLoginComponent,
     FacultyLoginComponent,
     DashboardComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
