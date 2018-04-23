@@ -25,11 +25,10 @@ app.engine('html',require('ejs').renderFile)
 
 
 //set static folder
-app.use(express.static(path.join(__dirname, '')));
-app.use('/', express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
+app.use('', express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'src')));
 
-
-app.use('/',faculty);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

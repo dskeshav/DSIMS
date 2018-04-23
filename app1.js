@@ -23,6 +23,8 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile)
 
 //set static folder
+app.use(express.static(path.join(__dirname, 'dist')));
+app.use('', express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'src')));
 
 // catch 404 and forward to error handler

@@ -1,4 +1,14 @@
-<div class="container fluid">
-  <label>USN:<input type="text"></label>
-  <label>Password:<input type="password"></label>
+<div class="container col-md-7" style="margin-top: 150px">
+  <div class="card card-container">
+    <label>USN:
+      <br>
+      <input type="text" id="usr" [(ngModel)]="usr" required>
+    </label>
+    <label>Password:<br>
+      <input type="password" placeholder="YYYY-MM-DD" id="pass" [(ngModel)]="pass" required>
+    </label>
+    <div class="col-xs-3 ">
+      <button class="btn btn-primary" (click)="login()">Login</button>
+    </div>
+  </div>
 </div>
