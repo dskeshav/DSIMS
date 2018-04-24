@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Course} from '../../../models/Course'
+
+import {HttpClient} from '@angular/common/http'
+//import {Course} from '../model/Course';
 
 @Component({
   selector: 'app-register',
@@ -8,10 +10,13 @@ import {Course} from '../../../models/Course'
 })
 export class RegisterComponent implements OnInit {
 
-  course:Course[]
-  constructor() { }
+  course:any
+  constructor(private http:HttpClient) { }
 
   ngOnInit() {
+    this.http.get('/course').subscribe(data=>{
+      this.course=data;
+    })
   }
 
 }

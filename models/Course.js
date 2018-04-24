@@ -1,10 +1,11 @@
 var mongoose=require('mongoose');
+var Schema=mongoose.Schema;
 
-var CourseSchema=new mongoose.Schema({
-       course:{
+var CourseSchema=new Schema({
            code:String,
            name:String,
-           credits:String,
-       }
+           credits:String
 });
-module.exports=mongoose.model('Course',CourseSchema);
+var Course=mongoose.model('Course',CourseSchema);
+module.exports=Course;
+

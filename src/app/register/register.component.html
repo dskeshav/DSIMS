@@ -1,13 +1,27 @@
 <p>
   register works!
 </p>
-
 <div>
-  <table>
-    <thead>
 
+</div>
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td *ngFor="let course of courses">
+          {{course.course}}
+        </td>
+      </tr>
     </thead>
     <tbody>
+      <tr>
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>
+          <input type="checkbox">
+        </td>
+      </tr>
 
     </tbody>
   </table>

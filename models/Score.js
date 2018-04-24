@@ -8,3 +8,7 @@ var Score = mongoose.Schema({
     },
     see:String
 });
+
+
+var Score=mongoose.module('Score',ScoreSchema);
+module.exports=Score;
