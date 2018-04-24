@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
-    this.http.get('/course').subscribe(data=>{
+    this.http.get('/student').subscribe(data=>{
       this.course=data;
     })
   }

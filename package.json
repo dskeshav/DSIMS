@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4200 && nodemon ./bin/student",
+    "start": "nodemon ./bin/student ",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

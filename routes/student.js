@@ -1,5 +1,5 @@
 var express = require('express');
-var Student = require('../models/Student');
+var Student = require('../models/Student.js');
 var Course = require('../models/Course')
 var router = express.Router();
 var mongoose = require('mongoose')

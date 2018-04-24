@@ -1,12 +1,10 @@
 var mongoose = require('mongoose');
-var Schema=mongoose.Schema;
 
-
-var StudentSchema = new Schema({
+var StudentSchema = new mongoose.Schema({
         firstName: String,
         lastName: String,
         dob: Object,
         gender:String
 });
-var Student=mongoose.model('Student',StudentSchema);
-module.exports = Student;
+
+module.exports = mongoose.model('Student',StudentSchema);

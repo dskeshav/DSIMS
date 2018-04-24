@@ -12,27 +12,11 @@ var app = express();
 var mongoose = require('mongoose');
 var uri = 'mongodb://keshav:sriram@ds043057.mlab.com:43057/dsims';
 
-// var options = {
-//   "server" : {
-//     "socketOptions" : {
-//       "keepAlive" : 300000,
-//       "connectTimeoutMS" : 30000
-//     }
-//   },
-//   "replset" : {
-//     "socketOptions" : {
-//       "keepAlive" : 300000,
-//       "connectTimeoutMS" : 30000
-//     }
-//   }
-// }
-
-mongoose.connect(uri);
+mongoose.connect(uri).then(() => console.log('connection succesful'))
+                                            .catch((err) => console.error(err));
 
 var db = mongoose.connection;
-
 db.on('error', console.error.bind(console, 'connection error:'));
-
 
 // var mongoose = require('mongoose');
 // mongoose.Promise = require('bluebird');
@@ -48,7 +32,6 @@ app.use(bodyParser.urlencoded({ 'extended': 'false' }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile)
-
 app.use('/student', student);
 
 
@@ -56,9 +39,6 @@ app.use('/student', student);
 // app.use(express.static(path.join(__dirname, 'dist')));
 // app.use('', express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'src')));
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
